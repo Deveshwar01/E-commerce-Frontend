@@ -1,4 +1,4 @@
-import { CartItem, ShippingInfo, User, wishlistItem } from "./types";
+import { CartItem, ShippingInfo, User, WishlistItem } from "./types";
 
 export interface UserReducerInitialState {
   user: User | null;
@@ -18,5 +18,5 @@ export interface CartReducerInitialState {
 
 export interface WishListReducerInitialState{
   loading:boolean,
-  wishListItems:wishlistItem[];
+  wishListItems:WishlistItem[];
 }
