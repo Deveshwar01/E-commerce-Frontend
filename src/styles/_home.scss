@@ -1,0 +1,12 @@
+.home {
+    >h1 {
+        @include heading(10px);
+        font-weight: 900;
+        @include flex(row, space-between, center);
+    }
+
+    .findmore {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+}
