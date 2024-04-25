@@ -10,6 +10,8 @@ import { Skeleton } from "../components/loader";
 import { CartItem } from "../types/types";
 import { addToCart } from "../redux/reducer/cartReducer";
 import { useDispatch } from "react-redux";
+import { addToWishList } from "../redux/reducer/wishListReducer";
+import { WishlistItem } from '../types/types'
 
 const Search = () => {
   const {
@@ -46,6 +48,11 @@ const Search = () => {
     toast.success("Added to cart");
   };
 
+
+  const addtoWishListHander = (wishlistItem: WishlistItem) => {
+    dispatch(addToWishList(wishlistItem))
+    toast.success("Added to WishList");
+  }
   const isPrevPage = page > 1;
   const isNextPage = page < 4;
 
@@ -119,6 +126,7 @@ const Search = () => {
                 stock={i.stock}
                 handler={addToCartHandler}
                 photo={i.photo}
+                WishListHandler={addtoWishListHander}
               />
             ))}
           </div>

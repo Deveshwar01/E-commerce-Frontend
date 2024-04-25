@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { WishListReducerInitialState } from "../../types/reducer-types";
-import { wishlistItem } from "../../types/types";
+import { WishlistItem } from "../../types/types";
 
 
 const initialState: WishListReducerInitialState = {
@@ -12,7 +12,7 @@ export const wishListReducer = createSlice({
     name: "wishListReducer",
     initialState,
     reducers: {
-        addToWishList: (state, action: PayloadAction<wishlistItem>) => {
+        addToWishList: (state, action: PayloadAction<WishlistItem>) => {
             state.loading = true;
 
             const index = state.wishListItems.findIndex(

@@ -22,6 +22,7 @@ const Home = () => {
     dispatch(addToCart(cartItem));
     toast.success("Added to cart");
   };
+  
   const addtoWishListHander = (wishlistItem: WishlistItem) => {
     dispatch(addToWishList(wishlistItem))
     toast.success("Added to WishList");
